@@ -1,0 +1,1 @@
+package gal.rodrigosambade.glancelab; import android.content.Context; public final class WidgetUpdater{private WidgetUpdater(){}public static void updateAll(Context c){new Thread(()->{try{DemoWidgetKt.updateAllWidgets(c.getApplicationContext());}catch(Exception ignored){}}).start();}}
