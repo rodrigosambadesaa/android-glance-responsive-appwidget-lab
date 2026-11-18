@@ -2,6 +2,10 @@ name: Android CI
 on:
   push:
   pull_request:
+# CVE-2026-114938: mitigate the affected Base64 intrinsic in the Android build JDK.
+env:
+  JAVA_TOOL_OPTIONS: -XX:-UseBASE64Intrinsics
+
 jobs:
   build:
     runs-on: ubuntu-latest
